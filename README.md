@@ -8,6 +8,6 @@
   npm run dev
 ```
 
-##Deploy
+## Deploy
 
   [aquí](https://customer-managament-page.vercel.app/)
