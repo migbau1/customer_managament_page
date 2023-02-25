@@ -11,3 +11,9 @@
 ## Deploy
 
   [aquí](https://customer-managament-page.vercel.app/)
+  
+  
+## Credential
+
+  correo: admin@correo.com
+  contraseña: Admin123
