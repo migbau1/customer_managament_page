@@ -1,10 +1,8 @@
 import { DataGrid, GridColDef, useGridApiRef } from "@mui/x-data-grid";
-import { GridApiCommunity } from "@mui/x-data-grid/models/api/gridApiCommunity";
 import { AsyncThunk } from "@reduxjs/toolkit";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { ICustomerState } from "../app/type/customer.type";
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { CustomerType } from "../mirage/types";
+import { useAppDispatch } from "../hooks";
 
 type dispatchType = AsyncThunk<any, any, any>;
 
@@ -46,7 +44,6 @@ function GridComponent({
             })
           );
         }}
-        // onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
         localeText={{
           columnMenuSortAsc: "Ordenar ascendente",
           columnMenuSortDesc: "Ordenar descendente",
