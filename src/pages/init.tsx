@@ -153,8 +153,6 @@ function DashboardContent() {
         value: string
       }
     }
-    console.log(target.nombre.value);
-
 
     clientDispatch(customerCreatedThunk({
       nombre: target.nombre.value,
@@ -180,8 +178,6 @@ function DashboardContent() {
         value: string
       },
     }
-    console.log(target.nombre.value);
-
 
     clientDispatch(customerEditedThunk({
       nombre: target.nombre.value,

@@ -6,8 +6,6 @@ export const customerLoadsThunk = createAsyncThunk('CUSTOMERS_LOAD',
         try {
 
             const rest = await Post(userData, "/api/admin_list_active_users")
-            console.log(rest);
-
             return { ...rest }
         } catch (error) {
             return rejectWithValue(error)
@@ -17,10 +15,8 @@ export const customerLoadsThunk = createAsyncThunk('CUSTOMERS_LOAD',
 export const customerCreatedThunk = createAsyncThunk('CUSTOMER_CREATED',
     async (userData: any, { rejectWithValue }) => {
         try {
-            console.log(userData);
 
             const rest = await Post(userData, "/api/customer_created")
-            console.log(rest);
 
             return { ...rest }
         } catch (error) {

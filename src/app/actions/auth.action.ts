@@ -8,7 +8,6 @@ export const loginThunk = createAsyncThunk('ADMIN_LOGIN',
                 password: FormDataEntryValue | null = userData.get("password");
 
             const rest = await Post({ email, password }, "/api/login")
-            console.log(rest);
 
             return { ...rest }
         } catch (error) {
@@ -19,7 +18,6 @@ export const loginThunk = createAsyncThunk('ADMIN_LOGIN',
 export const validatedThunk = createAsyncThunk("ADMIN_VALIDATED", async () => {
     try {
         const rest = await Get("/api/authenticated")
-        console.log(rest)
         return rest
     } catch (error) {
         return error

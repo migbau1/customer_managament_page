@@ -120,7 +120,6 @@ createServer({
     this.get("/authenticated", async (schema: AppSchema, request) => {
 
       const condition = await decodeTk(request.requestHeaders.authorization.replace("Bearer ", ""))
-      console.log(condition);
 
       if (!condition.grants) {
         return {
@@ -154,7 +153,6 @@ async function decodeTk(tk: string) {
       payload
     }
   } catch (error) {
-    console.log(error);
 
     return {
       grants: false,
