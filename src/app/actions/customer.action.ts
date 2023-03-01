@@ -28,7 +28,7 @@ export const customerDeletedThunk = createAsyncThunk('CUSTOMER_DELETED',
     async (id: string, { rejectWithValue }) => {
         try {
 
-            const rest = await Post({}, "/api/customer/" + id)
+            const rest = await Post({}, "/api/admin_delete_user/" + id)
 
             return { ...rest }
         } catch (error) {

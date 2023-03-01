@@ -24,9 +24,9 @@ export default function Login() {
     auth.login(data);
   };
 
-  if (!adminSelector.isLoading && adminSelector.isAuthenticated) {
-    window.location.reload();
-  }
+  // if (!adminSelector.isLoading && adminSelector.isAuthenticated) {
+  //   window.location.reload();
+  // }
 
   return (
     <ThemeProvider theme={theme}>

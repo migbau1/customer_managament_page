@@ -73,7 +73,7 @@ createServer({
         offset: customers.length
       }
     })
-    this.post("/customer/:id", async (schema: AppSchema, request) => {
+    this.post("/admin_delete_user/:id", async (schema: AppSchema, request) => {
       const condition = await decodeTk(request.requestHeaders.authorization.replace("Bearer ", ""))
       if (!condition.grants) {
         return {

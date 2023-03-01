@@ -1,11 +1,13 @@
 
 const okStatus = [200, 201, 202];
-const session = JSON.parse(localStorage.getItem("infoSession") || "{}")
+
+
 
 export const Post = async (
   data: object = {},
   path: string = "/"
 ): Promise<object> => {
+  const session = JSON.parse(localStorage.getItem("infoSession") || "{}")
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   myHeaders.append("Authorization", `Bearer ${session.tk}`);
@@ -29,6 +31,7 @@ export const Post = async (
 export const Get = async (
   path: string = "/"
 ): Promise<object> => {
+  const session = JSON.parse(localStorage.getItem("infoSession") || "{}")
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   myHeaders.append("Authorization", `Bearer ${session.tk}`);
